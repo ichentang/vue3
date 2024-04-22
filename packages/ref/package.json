@@ -2,5 +2,13 @@
   "name": "ref",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "buildOptions": {
+    "name": "VueRef",
+    "formats": [
+      "esm-bundler",
+      "cjs",
+      "global"
+    ]
+  }
 }
