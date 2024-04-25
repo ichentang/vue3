@@ -13,7 +13,7 @@ const dirs = fs.readdirSync('packages').filter((p) => {
 async function build(target) {
   console.log('target :>> ', target);
   // 注意 execa -c 执行rollup配置，环境变量 -env
-  await execa('rollup', ['-c', '--environment', `TARGET:${target}`]);
+  await execa('rollup', ['-c', '--environment', `TARGET:${target}`], { stdio: 'inherit' });
 }
 
 // 2 进行打包 并行打包
